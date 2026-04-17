@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 11%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 18% 93%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 91%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 36 33% 68%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 18% 87%;
+    --input: 220 18% 87%;
+    --ring: 36 33% 68%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gold: 36 33% 68%;
+    --gold-dark: 34 30% 52%;
+    --oxford: 222 47% 11%;
+    --oxford-light: 222 35% 22%;
+    --oxford-lighter: 222 25% 33%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(36 33% 72%), hsl(34 30% 55%));
+    --gradient-oxford: linear-gradient(135deg, hsl(222 47% 11%), hsl(222 35% 20%));
+    --gradient-hero-overlay: linear-gradient(180deg, hsla(222 47% 11% / 0.75) 0%, hsla(222 47% 11% / 0.5) 50%, hsla(222 47% 11% / 0.8) 100%);
+
+    --shadow-gold: 0 4px 30px hsla(36 33% 68% / 0.35);
+    --shadow-card: 0 8px 40px hsla(222 47% 11% / 0.08);
+    --shadow-card-hover: 0 16px 60px hsla(222 47% 11% / 0.15);
+    --shadow-depth: 0 20px 60px -15px hsla(222 47% 11% / 0.25);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 220 18% 93%;
+    --card: 222 40% 9%;
+    --card-foreground: 220 18% 93%;
+    --popover: 222 40% 9%;
+    --popover-foreground: 220 18% 93%;
+    --primary: 36 33% 68%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 222 35% 16%;
+    --secondary-foreground: 220 18% 93%;
+    --muted: 222 30% 13%;
+    --muted-foreground: 220 12% 58%;
+    --accent: 36 33% 68%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 36 33% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-gold {
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-oxford {
+    background-image: var(--gradient-oxford);
+  }
+
+  .bg-hero-overlay {
+    background-image: var(--gradient-hero-overlay);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .shadow-depth {
+    box-shadow: var(--shadow-depth);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-500 ease-out;
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .icon-animated {
+    @apply transition-all duration-300 ease-out;
+  }
+  .icon-animated:hover {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px hsl(36 33% 68% / 0.5));
+  }
+
+  .gold-underline {
+    @apply relative;
+  }
+  .gold-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500;
+    background-image: var(--gradient-gold);
+  }
+  .gold-underline:hover::after {
+    @apply w-full;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32 px-4 md:px-8;
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
