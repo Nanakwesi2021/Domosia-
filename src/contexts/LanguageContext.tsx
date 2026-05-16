@@ -95,6 +95,22 @@ const translations: Record<Language, Record<string, string>> = {
     'float.whatsapp': 'Chat on WhatsApp',
     'float.email': 'Send Email',
 
+    // About
+    'about.header.badge': 'About DOMOSIA',
+    'about.header.title': 'Redefining Short-Term <br className="hidden md:block"/> Rental Management',
+    'about.who.badge': 'Who We Are',
+    'about.who.title': 'A Passion for Hospitality & Excellence',
+    'about.who.p1': 'We are a rental management company built by a team passionate about hospitality, real estate, and operational excellence.',
+    'about.who.p2': 'The idea behind DOMOSIA was born from extensive experience in the hospitality sector in France, combined with our own experience as frequent Airbnb travelers with a strong appreciation for high standards, quality, and attention to detail.',
+    'about.who.p3': 'This journey allowed us to develop a deep understanding of guest expectations, property performance, and the level of excellence required to create exceptional stays.',
+    'about.mission.badge': 'Our Mission',
+    'about.mission.title': 'Maximizing Value, Seamlessly',
+    'about.mission.p1': 'Our mission is to help property owners maximize the value and profitability of their assets through a fully managed, high-end rental experience.',
+    'about.mission.p2': 'We combine local market expertise with international hospitality standards to deliver seamless management, exceptional guest satisfaction, and complete peace of mind for owners.',
+    'about.mission.p3': 'To ensure operational efficiency and consistency at scale, we have also developed industry-specific software designed to optimize and streamline every aspect of property management.',
+    'about.vision.badge': 'Our Vision',
+    'about.vision.quote': '"To redefine short-term rental management in Morocco by building a trusted brand recognized for <span class=\'text-gold font-medium\'>quality</span>, <span class=\'text-gold font-medium\'>transparency</span>, and <span class=\'text-gold font-medium\'>long-term value creation</span>."',
+
     // Simulator Translations
     "common.next": "Next",
     "common.back": "Back",
@@ -334,6 +350,22 @@ const translations: Record<Language, Record<string, string>> = {
     'float.whatsapp': 'Discuter sur WhatsApp',
     'float.email': 'Envoyer un Email',
 
+    // About
+    'about.header.badge': 'À Propos de DOMOSIA',
+    'about.header.title': 'Redéfinir la Gestion <br className="hidden md:block"/> Locative Courte Durée',
+    'about.who.badge': 'Qui Sommes-Nous',
+    'about.who.title': "Une Passion pour l'Hospitalité et l'Excellence",
+    'about.who.p1': "Nous sommes une société de gestion locative créée par une équipe passionnée par l'hospitalité, l'immobilier et l'excellence opérationnelle.",
+    'about.who.p2': "L'idée de DOMOSIA est née d'une vaste expérience dans le secteur hôtelier en France, combinée à notre propre expérience en tant que voyageurs réguliers sur Airbnb avec une forte appréciation pour les normes élevées, la qualité et l'attention aux détails.",
+    'about.who.p3': "Ce parcours nous a permis de développer une compréhension approfondie des attentes des clients, de la performance des propriétés et du niveau d'excellence requis pour créer des séjours exceptionnels.",
+    'about.mission.badge': 'Notre Mission',
+    'about.mission.title': 'Maximiser la Valeur, en Toute Simplicité',
+    'about.mission.p1': "Notre mission est d'aider les propriétaires à maximiser la valeur et la rentabilité de leurs actifs grâce à une expérience locative haut de gamme entièrement gérée.",
+    'about.mission.p2': "Nous combinons une expertise du marché local avec des normes d'hospitalité internationales pour offrir une gestion fluide, une satisfaction client exceptionnelle et une tranquillité d'esprit totale aux propriétaires.",
+    'about.mission.p3': "Pour garantir l'efficacité opérationnelle et la cohérence à grande échelle, nous avons également développé un logiciel spécifique à l'industrie conçu pour optimiser et rationaliser chaque aspect de la gestion immobilière.",
+    'about.vision.badge': 'Notre Vision',
+    'about.vision.quote': '"Redéfinir la gestion locative courte durée au Maroc en bâtissant une marque de confiance reconnue pour sa <span class=\'text-gold font-medium\'>qualité</span>, sa <span class=\'text-gold font-medium\'>transparence</span> et sa <span class=\'text-gold font-medium\'>création de valeur à long terme</span>."',
+
     // Simulator Translations
     "common.next": "Suivant",
     "common.back": "Retour",
@@ -572,6 +604,22 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.rights': '© 2026 دوموسيا. جميع الحقوق محفوظة.',
     'float.whatsapp': 'تحدث عبر واتساب',
     'float.email': 'أرسل بريداً',
+
+    // About
+    'about.header.badge': 'عن دوموسيا',
+    'about.header.title': 'إعادة تعريف إدارة <br className="hidden md:block"/> الإيجارات قصيرة الأجل',
+    'about.who.badge': 'من نحن',
+    'about.who.title': 'شغف بالضيافة والتميز',
+    'about.who.p1': 'نحن شركة إدارة إيجارات تأسست من قبل فريق شغوف بالضيافة والعقارات والتميز التشغيلي.',
+    'about.who.p2': 'ولدت فكرة دوموسيا من خبرة واسعة في قطاع الضيافة في فرنسا، إلى جانب تجربتنا الخاصة كمسافرين دائمين عبر Airbnb مع تقدير كبير للمعايير العالية والجودة والاهتمام بالتفاصيل.',
+    'about.who.p3': 'سمحت لنا هذه الرحلة بتطوير فهم عميق لتوقعات الضيوف وأداء العقارات ومستوى التميز المطلوب لخلق إقامات استثنائية.',
+    'about.mission.badge': 'مهمتنا',
+    'about.mission.title': 'تعظيم القيمة بسلاسة',
+    'about.mission.p1': 'مهمتنا هي مساعدة أصحاب العقارات على تعظيم قيمة وربحية أصولهم من خلال تجربة تأجير راقية تدار بالكامل.',
+    'about.mission.p2': 'نحن نجمع بين خبرة السوق المحلية ومعايير الضيافة الدولية لتقديم إدارة سلسة ورضا استثنائي للضيوف وراحة بال تامة للملاك.',
+    'about.mission.p3': 'لضمان الكفاءة التشغيلية والاتساق على نطاق واسع، قمنا أيضًا بتطوير برنامج خاص بالصناعة مصمم لتحسين وتبسيط كل جانب من جوانب إدارة العقارات.',
+    'about.vision.badge': 'رؤيتنا',
+    'about.vision.quote': '"إعادة تعريف إدارة الإيجار قصير الأجل في المغرب من خلال بناء علامة تجارية موثوقة ومعروفة بـ <span class=\'text-gold font-medium\'>الجودة</span> و <span class=\'text-gold font-medium\'>الشفافية</span> و <span class=\'text-gold font-medium\'>خلق القيمة على المدى الطويل</span>."',
 
     // Simulator Translations
     "common.next": "التالي",
