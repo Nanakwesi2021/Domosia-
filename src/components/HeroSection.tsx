@@ -19,9 +19,7 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-hero-overlay" />
 
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 border border-gold/20 rounded-full animate-float opacity-30" />
-      <div className="absolute bottom-32 right-16 w-20 h-20 border border-gold/15 rounded-full animate-float" style={{ animationDelay: '2s' }} />
+      {/* Decorative elements removed */}
 
       <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl">
         <motion.div

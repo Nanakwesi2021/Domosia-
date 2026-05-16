@@ -11,11 +11,12 @@ const Navbar = () => {
   const isHome = location.pathname === '/';
 
   const navItems = [
+    { key: 'nav.about', href: '/about', isRoute: true },
     { key: 'nav.services', href: isHome ? '#services' : '/#services' },
     { key: 'nav.howItWorks', href: isHome ? '#how-it-works' : '/#how-it-works' },
-    { key: 'nav.offers', href: isHome ? '#offers' : '/#offers' },
     { key: 'nav.technology', href: isHome ? '#technology' : '/#technology' },
-    { key: 'nav.faq', href: isHome ? '#faq' : '/#faq' },
+    { key: 'nav.offers', href: isHome ? '#offers' : '/#offers' },
+    { key: 'nav.faq', href: '/faq', isRoute: true },
     { key: 'nav.simulator', href: '/simulator', isRoute: true },
   ];
 

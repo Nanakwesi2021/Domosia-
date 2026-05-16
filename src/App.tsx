@@ -13,6 +13,8 @@ import NotFound from "./pages/NotFound";
 // Lazily load heavy simulator pages — jsPDF + recharts are only needed there
 const SimulatorPage = lazy(() => import("./pages/SimulatorPage"));
 const SimulatorEmbedPage = lazy(() => import("./pages/SimulatorEmbedPage"));
+const FAQPage = lazy(() => import("./pages/FAQPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,8 +42,10 @@ const App = () => (
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="/simulator" element={<SimulatorPage />} />
               <Route path="/simulator/embed" element={<SimulatorEmbedPage />} />
+              <Route path="/faq" element={<FAQPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
