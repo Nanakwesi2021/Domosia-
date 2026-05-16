@@ -47,23 +47,23 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="bg-background pb-24 pt-12 md:pb-32">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl space-y-24 md:space-y-32">
+      <div className="bg-background pb-16 pt-8 md:pb-32">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl space-y-16 md:space-y-32">
           
           {/* Who We Are - Clean Editorial Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
-              className="lg:col-span-5 space-y-6"
+              className="lg:col-span-5 space-y-4 md:space-y-6"
             >
-              <h2 className="text-sm font-semibold tracking-widest text-gold uppercase">{t('about.who.badge')}</h2>
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-oxford leading-tight">
+              <h2 className="text-xs md:text-sm font-semibold tracking-widest text-gold uppercase">{t('about.who.badge')}</h2>
+              <h3 className="text-2xl md:text-4xl font-display font-bold text-oxford leading-tight">
                 {t('about.who.title')}
               </h3>
-              <div className="space-y-4 text-oxford/80 font-body leading-relaxed">
+              <div className="space-y-4 text-oxford/80 font-body leading-relaxed text-sm md:text-base">
                 <p>{t('about.who.p1')}</p>
                 <p>{t('about.who.p2')}</p>
                 <p>{t('about.who.p3')}</p>
@@ -77,7 +77,7 @@ const AboutPage = () => {
               transition={{ duration: 0.8 }}
               className="lg:col-span-7"
             >
-              <div className="relative aspect-[4/3] overflow-hidden shadow-lg border border-gold/10">
+              <div className="relative aspect-[4/3] overflow-hidden shadow-lg border border-gold/10 rounded-sm">
                 <img 
                   src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop" 
                   alt="Luxurious Moroccan Interior" 
@@ -87,10 +87,10 @@ const AboutPage = () => {
             </motion.div>
           </div>
 
-          <div className="w-full border-t border-gold/20"></div>
+          <div className="w-full border-t border-gold/10"></div>
 
           {/* Our Mission */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -98,7 +98,7 @@ const AboutPage = () => {
               transition={{ duration: 0.8 }}
               className="lg:col-span-6 order-2 lg:order-1"
             >
-              <div className="relative aspect-square md:aspect-[4/3] overflow-hidden shadow-lg border border-gold/10">
+              <div className="relative aspect-[4/3] overflow-hidden shadow-lg border border-gold/10 rounded-sm">
                 <img 
                   src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop" 
                   alt="Premium Modern Interior" 
@@ -112,13 +112,13 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
-              className="lg:col-span-6 order-1 lg:order-2 space-y-6"
+              className="lg:col-span-6 order-1 lg:order-2 space-y-4 md:space-y-6"
             >
-              <h2 className="text-sm font-semibold tracking-widest text-gold uppercase">{t('about.mission.badge')}</h2>
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-oxford leading-tight">
+              <h2 className="text-xs md:text-sm font-semibold tracking-widest text-gold uppercase">{t('about.mission.badge')}</h2>
+              <h3 className="text-2xl md:text-4xl font-display font-bold text-oxford leading-tight">
                 {t('about.mission.title')}
               </h3>
-              <div className="space-y-4 text-oxford/80 font-body leading-relaxed">
+              <div className="space-y-4 text-oxford/80 font-body leading-relaxed text-sm md:text-base">
                 <p>{t('about.mission.p1')}</p>
                 <p>{t('about.mission.p2')}</p>
                 <p>{t('about.mission.p3')}</p>
@@ -132,15 +132,15 @@ const AboutPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="bg-oxford p-12 md:p-20 text-center relative overflow-hidden shadow-2xl"
+            className="bg-oxford p-8 md:p-20 text-center relative overflow-hidden shadow-2xl rounded-sm"
           >
             {/* Subtle background texture/gradient */}
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold via-oxford to-oxford"></div>
             
-            <div className="relative z-10 max-w-4xl mx-auto space-y-8">
-              <h2 className="text-sm font-semibold tracking-widest text-gold uppercase">{t('about.vision.badge')}</h2>
+            <div className="relative z-10 max-w-4xl mx-auto space-y-6 md:space-y-8">
+              <h2 className="text-xs md:text-sm font-semibold tracking-widest text-gold uppercase">{t('about.vision.badge')}</h2>
               <p 
-                className="text-2xl md:text-3xl lg:text-4xl text-white font-display font-light leading-snug"
+                className="text-xl md:text-3xl lg:text-4xl text-white font-display font-light leading-snug"
                 dangerouslySetInnerHTML={{ __html: t('about.vision.quote') }}
               />
             </div>

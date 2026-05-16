@@ -34,9 +34,9 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-oxford/95 backdrop-blur-md border-b border-gold/10"
     >
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
-        <a href="#" className="font-display text-2xl md:text-3xl font-bold tracking-wider text-primary-foreground">
+        <Link to="/" className="font-display text-2xl md:text-3xl font-bold tracking-wider text-primary-foreground">
           DOMO<span className="text-gold">SIA</span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
@@ -81,7 +81,8 @@ const Navbar = () => {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-primary-foreground p-2"
+          className="md:hidden text-primary-foreground p-2 focus:outline-none"
+          aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -90,51 +91,60 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-oxford border-t border-gold/10 overflow-hidden"
-          >
-            <div className="flex flex-col px-4 py-4 gap-3">
-              {navItems.map((item) => (
-                item.isRoute ? (
-                  <Link
-                    key={item.key}
-                    to={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-sm font-medium text-primary-foreground/80 hover:text-gold py-2 transition-colors"
-                  >
-                    {t(item.key)}
-                  </Link>
-                ) : (
-                  <a
-                    key={item.key}
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-sm font-medium text-primary-foreground/80 hover:text-gold py-2 transition-colors"
-                  >
-                    {t(item.key)}
-                  </a>
-                )
-              ))}
-              <div className="flex gap-2 pt-2">
-                {languages.map((l) => (
-                  <button
-                    key={l.code}
-                    onClick={() => { setLang(l.code); setMobileOpen(false); }}
-                    className={`px-4 py-2 text-xs font-semibold rounded-full transition-all ${
-                      lang === l.code
-                        ? 'bg-gradient-gold text-oxford'
-                        : 'border border-gold/30 text-primary-foreground/70'
-                    }`}
-                  >
-                    {l.label}
-                  </button>
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileOpen(false)}
+              className="fixed inset-0 top-[64px] bg-black/60 backdrop-blur-sm z-[-1]"
+            />
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden bg-oxford border-t border-gold/10 overflow-hidden shadow-2xl"
+            >
+              <div className="flex flex-col px-6 py-8 gap-1">
+                {navItems.map((item) => (
+                  item.isRoute ? (
+                    <Link
+                      key={item.key}
+                      to={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-base font-medium text-primary-foreground/90 hover:text-gold py-3 transition-colors border-b border-white/5"
+                    >
+                      {t(item.key)}
+                    </Link>
+                  ) : (
+                    <a
+                      key={item.key}
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-base font-medium text-primary-foreground/90 hover:text-gold py-3 transition-colors border-b border-white/5"
+                    >
+                      {t(item.key)}
+                    </a>
+                  )
                 ))}
+                <div className="flex gap-3 pt-6">
+                  {languages.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => { setLang(l.code); setMobileOpen(false); }}
+                      className={`flex-1 py-3 text-sm font-semibold rounded-lg transition-all ${
+                        lang === l.code
+                          ? 'bg-gradient-gold text-oxford'
+                          : 'bg-white/5 border border-gold/20 text-primary-foreground/70'
+                      }`}
+                    >
+                      {l.label}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.nav>

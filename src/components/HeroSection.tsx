@@ -33,7 +33,7 @@ const HeroSection = () => {
 
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 text-primary-foreground whitespace-pre-line">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 text-primary-foreground whitespace-pre-line">
             {t('hero.headline').split(',').map((part, i) =>
               <span key={i}>
                 {i === 0 ?
