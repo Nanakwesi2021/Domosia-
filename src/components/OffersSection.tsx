@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
 import { Check, Crown, Monitor } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState } from 'react';
+import ContactModal from './ContactModal';
 
 const OffersSection = () => {
   const { t } = useLanguage();
+  const [contactOpen, setContactOpen] = useState(false);
 
   const offers = [
   {
@@ -93,7 +96,8 @@ const OffersSection = () => {
               </ul>
 
               <a
-              href="#contact"
+              href="#"
+              onClick={(e) => { e.preventDefault(); setContactOpen(true); }}
               className={`block text-center py-3 px-6 rounded-lg font-semibold font-body text-sm tracking-wide uppercase transition-all duration-300 ${
               offer.featured ?
               'bg-gradient-gold text-oxford hover:shadow-gold hover:scale-105' :
@@ -121,6 +125,7 @@ const OffersSection = () => {
           </div>
         </motion.div>
       </div>
+      <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
     </section>);
 
 };
